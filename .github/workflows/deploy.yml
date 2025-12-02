@@ -1,0 +1,27 @@
+name: Deploy from Artifact
+on:
+  workflow_dispatch:  # Manual trigger
+  repository_dispatch:  # Trigger from SkySentinel_pvt
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Download react-build
+        uses: actions/download-artifact@v4
+        with:
+          name: react-build
+          path: build/
+          
+      - name: Deploy
+        run: |
+          shopt -s extglob
+          rm -rf !( .git )
+          cp -r build/. .
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Deploy React build" || echo "No changes"
+          git push
