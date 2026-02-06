@@ -1,0 +1,31 @@
+{
+  "last_updated": "2025-12-18T11:51:38.413833",
+  "system_status": "revolutionary",
+  "intelligence_streams": 5,
+  "capabilities_active": {
+    "beast_intelligence_active": true,
+    "correlation_system_active": true,
+    "storm_detection_active": false,
+    "aeroprint_system_active": true,
+    "bridge_intelligence_active": false,
+    "total_intelligence_streams": 5
+  },
+  "intelligence_summary": {
+    "total_files_processed": 32,
+    "intelligence_types_found": [
+      "report_intelligence",
+      "beast_intelligence",
+      "log_analysis",
+      "correlation_intelligence",
+      "aeroprint_intelligence"
+    ],
+    "intelligence_by_type_count": {
+      "report_intelligence": 18,
+      "beast_intelligence": 2,
+      "log_analysis": 4,
+      "correlation_intelligence": 5,
+      "aeroprint_intelligence": 1
+    }
+  },
+  "total_files_processed": 32
+}
